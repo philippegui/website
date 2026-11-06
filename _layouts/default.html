@@ -297,7 +297,7 @@
       opacity: 1;
     }
 
-    /* --- Main Resume Content Container --- */
+    /* --- Main Content Container --- */
     .container {
       max-width: 760px;
       margin: 32px auto 60px auto;
@@ -309,38 +309,142 @@
       transition: background 0.2s ease, border-color 0.2s ease;
     }
 
-    .content-area { margin-bottom: 32px; }
-    h1 { font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .subtitle { font-size: 1.1rem; color: var(--accent); margin-bottom: 8px; font-weight: 500; }
-    .contact-links { margin-bottom: 24px; font-size: 0.95rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px; }
-    .contact-links a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
-    .contact-links a:hover { color: var(--accent); }
+    /* --- Semantic Modern Markdown Styling --- */
+    .content-area {
+      line-height: 1.65;
+    }
 
-    h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 28px; margin-bottom: 16px; }
-    
+    /* Top Name & Title (h1) */
+    .content-area h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    /* Contact & Subtitle line directly after h1 */
+    .content-area h1 + p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .content-area h1 + p a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .content-area h1 + p a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Section Headings (##) */
+    .content-area h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-top: 36px;
+      margin-bottom: 18px;
+      border-bottom: none;
+    }
+
+    .content-area h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Experience & Degree Title (###) with auto-aligning right date code pill */
     .content-area h3 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-top: 18px;
-      margin-bottom: 2px;
+      flex-wrap: wrap;
+      gap: 8px;
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--text);
+      margin-top: 22px;
+      margin-bottom: 2px;
     }
-    .content-area h3 span {
-      font-size: 0.875rem;
-      font-weight: 400;
+
+    /* Backticks in ### headings: ### Title `2023 – Present` */
+    .content-area h3 code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.8rem;
       color: var(--muted);
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-weight: 500;
     }
 
-    p { margin-bottom: 14px; }
-    ul { list-style-position: outside; margin-left: 20px; margin-bottom: 16px; color: var(--text); }
-    li { margin-bottom: 6px; }
-    hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+    /* Organization line right under h3: *University of California, San Francisco* */
+    .content-area h3 + p em {
+      font-style: normal;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .skill-tag { background: var(--tag-bg); color: var(--text); padding: 4px 10px; border-radius: 4px; font-size: 0.875rem; }
+    /* Standard bullet lists */
+    .content-area ul {
+      list-style-position: outside;
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .content-area li {
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+
+    /* Backtick pills in lists for tools & skills: - `FlowJo` `Prism` `R` */
+    .content-area li code {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin: 2px 3px;
+    }
+
+    .content-area p {
+      margin-bottom: 14px;
+    }
+
+    .content-area a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .content-area a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
   </style>
 </head>
 <body>
@@ -352,7 +456,7 @@
     </div>
   </header>
 
-  <!-- Resume content card -->
+  <!-- Content card -->
   <div class="container">
     <main class="content-area">
       {{ content }}

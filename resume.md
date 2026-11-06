@@ -5,35 +5,33 @@ published: true
 ---
 
 # Philippe Gui
-<div class="subtitle">Associate Specialist & Biomedical Researcher</div>
-<div class="contact-links">
-  <span>San Francisco, CA</span>
-  <a href="mailto:philippe.gui@ucsf.edu">philippe.gui@ucsf.edu</a>
-  <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-</div>
+Associate Specialist & Biomedical Researcher  
+San Francisco, CA · [philippe.gui@ucsf.edu](mailto:philippe.gui@ucsf.edu) · [philippegui.com](https://philippegui.com)
 
-## Research & Professional Summary
-Investigating tumor-macrophage crosstalk and mechanisms of EGFR targeted therapy resistance in lung adenocarcinoma. Experienced in designing mechanistic assays, quantitative pipeline validation, and translational oncology data analysis.
+## Summary
+Translational oncology researcher investigating tumor-macrophage crosstalk and mechanisms of targeted therapy resistance in lung adenocarcinoma. Specialized in mechanistic assay optimization, flow cytometric profiling, and translational data analysis.
 
-## Experience
+## Professional Experience
 
-### Associate Specialist <span>2023 – Present</span>
-University of California, San Francisco (UCSF)
-- Investigate macrophage polarization dynamics within the lung adenocarcinoma tumor microenvironment.
-- Analyze phenotypic and transcriptional shifts conferring resistance to third-generation EGFR tyrosine kinase inhibitors.
-- Oversee assay development, reagent validation, and multi-sample cohort tracking.
+### Associate Specialist `2023 – Present`
+*University of California, San Francisco (UCSF)*
+- Investigate macrophage polarization dynamics within the lung adenocarcinoma tumor microenvironment under therapeutic selective pressure.
+- Characterize phenotypic and transcriptional signatures conferring resistance to 3rd-generation EGFR tyrosine kinase inhibitors.
+- Design and validate high-throughput multi-color flow cytometry panels and quantitative downstream analysis pipelines.
+
+### Biomedical Researcher `2020 – 2023`
+*Translational Cancer Biology Laboratory*
+- Developed 3D co-culture models to assess microenvironment-mediated cellular survival pathways.
+- Managed sample inventory, tracking protocols, and standard operating procedures for translational clinical cohorts.
 
 ## Education
 
-### Degree in Biological Sciences / Molecular Biology
-University Name — Graduated
+### Degree in Biological Sciences / Molecular Biology `Graduated`
+*University Name*
 
-## Core Expertise & Methods
-<div class="skills-grid">
-  <span class="skill-tag">Tumor Microenvironment</span>
-  <span class="skill-tag">EGFR Signaling</span>
-  <span class="skill-tag">Targeted Therapy Resistance</span>
-  <span class="skill-tag">Flow Cytometry</span>
-  <span class="skill-tag">Cell Culture Assays</span>
-  <span class="skill-tag">Translational Research</span>
-</div>
+## Selected Publications
+- **Macrophage-mediated survival programs bypass EGFR kinase inhibition in lung adenocarcinoma**  
+  Gui, P., et al. — *Journal / In Revision* [DOI / Link](https://scholar.google.com)
+
+## Technical Skills
+- `Flow Cytometry` `Tumor Microenvironment Assays` `Targeted EGFR Pathways` `Primary Cell Culture` `Western Blot` `ELISA` `FlowJo` `Prism` `R / Bioconductor`

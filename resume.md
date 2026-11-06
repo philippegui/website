@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resume
-published: false
+published: true
 ---
 
 # Philippe Gui

@@ -4,8 +4,8 @@ title: Philippe Gui
 published: true
 ---
 
-# Hi, I'm Philippe Gui
-I'm an Associate Specialist & Biomedical Researcher at UCSF
+# Hi, I'm Philippe Gui 👋
+I'm a scientist.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas in dui et ultricies. Integer et vehicula lorem. Phasellus vitae leo sit amet dolor varius laoreet nec vitae ante. In eu mollis nisi. Phasellus ac justo turpis. Sed sollicitudin magna eget quam ultrices porta. Nam dapibus tortor lacus, vel lacinia libero tincidunt eu. Morbi nec orci venenatis, tempor mauris nec, dapibus velit. Pellentesque ultricies dolor varius, consectetur nibh non, tempus nunc. Duis vehicula hendrerit leo, quis imperdiet metus commodo non. Sed consectetur elit ut lorem egestas sodales.
 

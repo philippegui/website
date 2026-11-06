@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Philippe Gui | Curriculum Vitae
+title: Resume
+published: false
 ---
 
 # Philippe Gui

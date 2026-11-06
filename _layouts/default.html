@@ -58,7 +58,18 @@
     .contact-links a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
     .contact-links a:hover { color: var(--accent); }
     h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; color: #111827; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 28px; margin-bottom: 16px; }
-    h3 { font-size: 1.05rem; font-weight: 600; color: #111827; margin-top: 16px; margin-bottom: 2px; }
+    .content-area h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 18px;
+      margin-bottom: 2px;
+    }
+    .content-area h3 span {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
     p { margin-bottom: 14px; }
     ul { list-style-position: outside; margin-left: 20px; margin-bottom: 16px; color: var(--text); }
     li { margin-bottom: 6px; }

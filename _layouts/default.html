@@ -413,8 +413,21 @@
       font-size: 0.94rem;
     }
 
-    /* Backtick pills in lists for tools & skills: - `FlowJo` `Prism` `R` */
-    .content-area li code {
+    /* Method 1: Remove bullet disc and margin when a list item contains backtick badge pills */
+    .content-area ul:has(code) {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .content-area li:has(code) {
+      list-style: none;
+      margin-bottom: 8px;
+    }
+
+    /* Backtick pills in lists or paragraphs: `FlowJo` `Prism` `R` */
+    .content-area li code,
+    .content-area p code {
       display: inline-block;
       font-family: inherit;
       font-size: 0.82rem;
@@ -424,7 +437,8 @@
       border: 1px solid var(--border);
       padding: 3px 10px;
       border-radius: 9999px;
-      margin: 2px 3px;
+      margin: 2px 3px 2px 0;
+      line-height: 1.4;
     }
 
     .content-area p {

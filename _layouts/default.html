@@ -74,7 +74,7 @@
       padding: 14px 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Spreads nav links to left, toggle to right */
+      justify-content: space-between;
     }
 
     .nav-bar {
@@ -100,24 +100,84 @@
       border-bottom-color: var(--accent);
     }
 
-    /* Theme Toggle Button */
-    .theme-toggle-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 6px 10px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: inline-flex;
+    /* --- Segmented Theme Pill Switch --- */
+    .theme-switch {
+      position: relative;
+      width: 68px;
+      height: 36px;
+      border-radius: 9999px;
+      background-color: #f1f3f5;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
       align-items: center;
-      justify-content: center;
-      transition: border-color 0.15s ease, color 0.15s ease;
+      justify-content: space-between;
+      padding: 3px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .theme-toggle-btn:hover {
-      border-color: var(--accent);
-      color: var(--text);
+    /* Sliding pill indicator */
+    .switch-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 30px;
+      height: 28px;
+      border-radius: 9999px;
+      background-color: #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease;
+      z-index: 1;
+    }
+
+    .switch-icon {
+      position: relative;
+      z-index: 2;
+      width: 30px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .switch-icon svg {
+      width: 17px;
+      height: 17px;
+      transition: stroke 0.25s ease, opacity 0.25s ease;
+    }
+
+    .sun-icon svg {
+      stroke: #1f2937;
+      opacity: 1;
+    }
+    .moon-icon svg {
+      stroke: #94a3b8;
+      opacity: 0.7;
+    }
+
+    /* Dark Mode Switch Styling */
+    [data-theme="dark"] .theme-switch {
+      background-color: #0b0f19;
+      border-color: #1e293b;
+    }
+
+    [data-theme="dark"] .switch-thumb {
+      transform: translateX(30px);
+      background-color: #26334d;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="dark"] .sun-icon svg {
+      stroke: #64748b;
+      opacity: 0.6;
+    }
+
+    [data-theme="dark"] .moon-icon svg {
+      stroke: #ffffff;
+      opacity: 1;
     }
 
     /* --- Main Resume Content Container --- */
@@ -184,25 +244,18 @@
 
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
-    function updateToggleIcon() {
-      if (!toggleBtn) return;
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      toggleBtn.innerHTML = isDark ? '☀️ Light' : '🌙 Dark';
-      toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-
     if (toggleBtn) {
-      updateToggleIcon();
       toggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+
         if (nextTheme === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
         } else {
           document.documentElement.removeAttribute('data-theme');
         }
+
         localStorage.setItem('theme', nextTheme);
-        updateToggleIcon();
       });
     }
   </script>

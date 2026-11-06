@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Philippe Gui
+title: PG
 published: true
 ---
 

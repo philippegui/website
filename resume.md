@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Philippe Gui
+published: false
 ---
 
 # Philippe Gui

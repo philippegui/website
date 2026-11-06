@@ -17,7 +17,7 @@ Investigating tumor-macrophage crosstalk and mechanisms of EGFR targeted therapy
 ## Experience
 
 ### Associate Specialist <span>2023 – Present</span>
-*University of California, San Francisco (UCSF)*
+University of California, San Francisco (UCSF)
 - Investigate macrophage polarization dynamics within the lung adenocarcinoma tumor microenvironment.
 - Analyze phenotypic and transcriptional shifts conferring resistance to third-generation EGFR tyrosine kinase inhibitors.
 - Oversee assay development, reagent validation, and multi-sample cohort tracking.
@@ -25,7 +25,7 @@ Investigating tumor-macrophage crosstalk and mechanisms of EGFR targeted therapy
 ## Education
 
 ### Degree in Biological Sciences / Molecular Biology
-*University Name* — Graduated
+University Name — Graduated
 
 ## Core Expertise & Methods
 <div class="skills-grid">

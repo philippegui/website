@@ -38,11 +38,15 @@
     .nav-inner {
       max-width: 760px;
       margin: 0 auto;
-      padding: 16px 20px;
+      padding: 14px 20px;          /* Equal top and bottom spacing */
+      display: flex;
+      align-items: center;         /* Perfectly centers items vertically */
+      min-height: 52px;            /* Optional: guarantees consistent nav bar height */
     }
 
     .nav-bar {
       display: flex;
+      align-items: center;
       gap: 18px;
     }
     .nav-bar a {
@@ -50,9 +54,11 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent; /* Reserves the 2px space at all times */
+      padding-top: 4px;            /* Equal top padding */
+      padding-bottom: 4px;         /* Equal bottom padding */
+      border-bottom: 2px solid transparent;
       transition: color 0.15s ease, border-color 0.15s ease;
+      line-height: 1;              /* Prevents extra font baseline gap */
     }
     .nav-bar a:hover {
       color: var(--accent);

@@ -80,7 +80,7 @@
     .nav-inner {
       width: 100%;
       max-width: 760px;
-      padding: 8px 16px;
+      padding: 8px 8px 8px 14px; /* Exactly 8px on top, bottom, and right */
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -230,6 +230,7 @@
       position: relative;
       width: 62px;
       height: 32px;
+      flex-shrink: 0;
       border-radius: 9999px;
       background-color: #f1f3f5;
       border: 1px solid rgba(0, 0, 0, 0.08);
@@ -237,6 +238,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 2px;
+      margin: 0;
       cursor: pointer;
       outline: none;
       transition: background-color 0.25s ease, border-color 0.25s ease;
@@ -304,7 +306,7 @@
       opacity: 1;
     }
 
-    /* --- Main Content Layout (Box Removed) --- */
+    /* --- Main Content Layout --- */
     .container {
       max-width: 760px;
       margin: 40px auto 80px auto;
@@ -475,7 +477,7 @@
     </div>
   </header>
 
-  <!-- Content area (seamless layout without enclosing card box) -->
+  <!-- Content area -->
   <div class="container">
     <main class="content-area">
       {{ content }}
